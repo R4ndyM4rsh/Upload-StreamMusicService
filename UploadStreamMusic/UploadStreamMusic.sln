@@ -3,7 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32505.173
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UploadStreamMusic.Web", "UploadStreamMusic.Web\UploadStreamMusic.Web.csproj", "{D18C2184-E2BD-4F5A-BF5C-8D170CEA88EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UploadStreamMusic.Web", "UploadStreamMusic.Web\UploadStreamMusic.Web.csproj", "{D18C2184-E2BD-4F5A-BF5C-8D170CEA88EB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{812D93A5-F2CD-454E-B050-2E94B61C92A8} = {812D93A5-F2CD-454E-B050-2E94B61C92A8}
+		{D02D5159-E900-49BD-89AA-3B0EE9CEAB0F} = {D02D5159-E900-49BD-89AA-3B0EE9CEAB0F}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UpladStreamMusic.Core", "UpladStreamMusic.Core\UpladStreamMusic.Core.csproj", "{812D93A5-F2CD-454E-B050-2E94B61C92A8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UploadStreamMusic.Data", "UploadStreamMusic.Data\UploadStreamMusic.Data.csproj", "{D02D5159-E900-49BD-89AA-3B0EE9CEAB0F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{812D93A5-F2CD-454E-B050-2E94B61C92A8} = {812D93A5-F2CD-454E-B050-2E94B61C92A8}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +26,14 @@ Global
 		{D18C2184-E2BD-4F5A-BF5C-8D170CEA88EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D18C2184-E2BD-4F5A-BF5C-8D170CEA88EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D18C2184-E2BD-4F5A-BF5C-8D170CEA88EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{812D93A5-F2CD-454E-B050-2E94B61C92A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{812D93A5-F2CD-454E-B050-2E94B61C92A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{812D93A5-F2CD-454E-B050-2E94B61C92A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{812D93A5-F2CD-454E-B050-2E94B61C92A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D02D5159-E900-49BD-89AA-3B0EE9CEAB0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D02D5159-E900-49BD-89AA-3B0EE9CEAB0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D02D5159-E900-49BD-89AA-3B0EE9CEAB0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D02D5159-E900-49BD-89AA-3B0EE9CEAB0F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -11,6 +11,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using UpladStreamMusic.Core;
+using UploadStreamMusic.Data;
 
 namespace UploadStreamMusic.Web
 {
@@ -28,6 +30,8 @@ namespace UploadStreamMusic.Web
     {
 
       services.AddControllers();
+      services.AddData();
+      services.AddCore();
       services.AddSwaggerGen(c =>
       {
         c.SwaggerDoc("v1", new OpenApiInfo { Title = "UploadStreamMusic.Web", Version = "v1" });
