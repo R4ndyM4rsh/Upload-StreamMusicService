@@ -3,19 +3,29 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UpladStreamMusic.Core.Domains.Music.Repositories;
 
 namespace UpladStreamMusic.Core.Domains.Music.Services
 {
   public class MusicService : IMusicService
   {
-    public Task Stream(string id)
+    private readonly IMusicRepository _musicRepository;
+    public MusicService(IMusicRepository musicRepository) 
     {
-      throw new NotImplementedException();
+      _musicRepository = musicRepository;
+    }
+    public async Task Stream(string id)
+    {
+      await _musicRepository.Stream(id);
     }
 
-    public Task Upload(Music music)
+    public async Task Upload(Music music)
     {
-      throw new NotImplementedException();
+      if (music == null) 
+      {
+        throw new Exception("Файл отсутствует");
+      }
+      await _musicRepository.Upload(music);
     }
   }
 }

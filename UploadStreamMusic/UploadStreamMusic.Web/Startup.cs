@@ -12,7 +12,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using UpladStreamMusic.Core;
+using UpladStreamMusic.Core.Domains.Music.Repositories;
+using UpladStreamMusic.Core.Domains.Music.Services;
 using UploadStreamMusic.Data;
+using UploadStreamMusic.Data.Music.Repositories;
 
 namespace UploadStreamMusic.Web
 {
@@ -30,12 +33,12 @@ namespace UploadStreamMusic.Web
     {
 
       services.AddControllers();
-      services.AddData();
-      services.AddCore();
       services.AddSwaggerGen(c =>
       {
         c.SwaggerDoc("v1", new OpenApiInfo { Title = "UploadStreamMusic.Web", Version = "v1" });
       });
+      services.AddData();
+      services.AddCore();
     }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
